@@ -1,335 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>방화 마사지 상세정보 및 이용가이드 | 방화 마사지 이벤트</title>
-  <meta name="description" content="방화역 인근에서 어깨 통증과 만성 피로를 날려주는 스웨디시, 아로마 마사지 샵들의 주말 한정 깜짝 할인 이벤트 및 예약 정보. 이용 절차, 상세한 위치 시그널 및 맞춤형 가이드 수록.">
-  <meta name="keywords" content="방화 마사지 이벤트, 방화 마사지 위치, 방화 마사지 예약방법, 방화 마사지 꿀팁">
-  <link rel="canonical" href="https://t3b05-bh-massage-evt-1.pages.dev/about.html">
-  <meta name="bpaas-design-system" content="midnight-glass">
-  <meta name="bpaas-design-theme" content="kr-t3b05-bh-massage-evt-1">
-  <style>
-    
-    :root {
-      --bg-dark: #062f22;
-      --bg-card: rgba(255, 255, 255, 0.03);
-      --border-color: rgba(255, 255, 255, 0.08);
-      --primary-neon: #065f46;
-      --accent-neon: #10b981;
-      --text-main: #f4f4f5;
-      --text-muted: #a1a1aa;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: sans-serif, -apple-system, sans-serif;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    
-    .glow-header {
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 20px;
-    }
-    
-    .logo-glow {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #fff;
-      text-decoration: none;
-      background: linear-gradient(135deg, #fff, var(--accent-neon));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    
-    .nav-links a:hover {
-      color: var(--accent-neon);
-    }
-    
-    .hero-glow {
-      padding: 120px 20px 80px;
-      text-align: center;
-      background: radial-gradient(circle at top, var(--primary-neon) 0%, transparent 70%);
-      position: relative;
-    }
-    
-    .hero-glow h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      margin-bottom: 20px;
-      letter-spacing: -0.05em;
-      line-height: 1.2;
-    }
-    
-    .gradient-txt {
-      background: linear-gradient(135deg, #fff, var(--accent-neon));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .hero-glow p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto 30px;
-    }
-    
-    .neon-btn {
-      display: inline-block;
-      padding: 14px 32px;
-      background: linear-gradient(135deg, var(--primary-neon), var(--accent-neon));
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 9999px;
-      box-shadow: 0 4px 20px rgba(236, 72, 153, 0.3);
-      transition: all 0.3s ease;
-    }
-    
-    .neon-btn:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 25px rgba(236, 72, 153, 0.6);
-    }
-    
-    .sec-wrap {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 80px 20px;
-    }
-    
-    .glass-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 20px;
-      padding: 40px;
-      backdrop-filter: blur(8px);
-      margin-bottom: 40px;
-    }
-    
-    .glass-box h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 24px;
-      color: #fff;
-      border-left: 4px solid var(--accent-neon);
-      padding-left: 16px;
-    }
-    
-    .glass-box p {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-    
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-    
-    .mini-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 24px;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    
-    .mini-card:hover {
-      border-color: var(--accent-neon);
-      transform: translateY(-2px);
-    }
-    
-    .mini-card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-    
-    .mini-card p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 0;
-    }
-    
-    .ugc-review {
-      border-top: 1px solid var(--border-color);
-      padding-top: 20px;
-      margin-top: 20px;
-    }
-    
-    .reviewer-meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      color: var(--accent-neon);
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-    
-    .reviewer-text {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      font-style: italic;
-    }
-    
-    .phone-bar {
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
-      padding: 16px;
-      border-radius: 8px;
-      margin: 20px 0;
-      font-size: 1.3rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-    }
-    
-    .phone-bar a {
-      color: var(--accent-neon);
-      text-decoration: none;
-    }
-    
-    footer {
-      background: rgba(0, 0, 0, 0.4);
-      border-top: 1px solid var(--border-color);
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-    
-    footer p {
-      margin-bottom: 8px;
-    }
-    
-    footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    
-    footer a:hover {
-      color: var(--accent-neon);
-    }
-    
-    @media(max-width: 768px) {
-      .hero-glow h1 {
-        font-size: 2.2rem;
-      }
-      .nav-links {
-        display: none;
-      }
-      .glass-box {
-        padding: 24px;
-      }
-    }
-  
-  </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "name": "방화 마사지 상세정보",
-      "url": "https://t3b05-bh-massage-evt-1.pages.dev/about.html",
-      "description": "방화 마사지의 상세 위치, 이용 프로세스 및 예약 안내."
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방화 마사지 이벤트 | 정보</title>
+    <meta name="description" content="방화동 전신 마사지 30% 할인 이벤트 상세 정보. 예약 필수, 89% 만족률, 2025년 4월 한정. 위치 및 정책 안내. 010-6279-0862">
+    <meta name="keywords" content="방화 마사지, 방화동 마사지 이벤트, 방화 마사지 할인, 방화 전신 마사지 정보, 방화 스웨디시 예약">
+    <meta name="author" content="방화 마사지 이벤트">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <link rel="canonical" href="https://t3b05-bh-massage-evt-1.vercel.app/info">
+    <meta property="og:title" content="방화 마사지 이벤트 | 강력한 효과, 거침없는 가격">
+    <meta property="og:description" content="방화동 전신 마사지 30% 할인 이벤트 상세 정보. 예약 필수, 89% 만족률, 2025년 4월 한정. 위치 및 정책 안내.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b05-bh-massage-evt-1.vercel.app/info">
+    <meta property="og:image" content="https://t3b05-bh-massage-evt-1.vercel.app/og-info.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="방화 마사지 이벤트 | 정보">
+    <meta name="twitter:description" content="방화동 전신 마사지 30% 할인 이벤트 상세 정보. 예약 필수, 89% 만족률.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html"><span class="logo-icon">◼</span> 방화 마사지</a>
+            </div>
+            <button class="hamburger-menu" aria-label="메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html">홈</a>
+                <a href="info.html" class="active">정보</a>
+                <a href="pricing.html">가격</a>
+                <a href="contact.html">문의</a>
+            </nav>
+        </div>
+    </header>
 
-  <header class="glow-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo-glow">방화 마사지</a>
-      <nav class="nav-links">
-        <a href="index.html">홈</a>
-        <a href="about.html">상세정보</a>
-        
-      </nav>
-    </div>
-  </header>
+    <main>
+        <section class="hero hero--small">
+            <div class="container">
+                <h1 class="section-title"><span>INFO</span> 방화 마사지 이벤트 상세</h1>
+                <p>2025년 4월 한정, 전신 마사지 30% 할인. 방화동 마사지 이벤트는 데이터로 증명합니다: 방문객 89% 만족, 재방문율 72%.</p>
+            </div>
+        </section>
 
-  <section class="hero-glow">
-    <h1><span class="gradient-txt">ABOUT</span> 방화 마사지</h1>
-    <p>방화 지역의 로컬 가이드로서 형들에게 가장 안전하고 신뢰할 수 있는 정보를 제공합니다.</p>
-    <div class="phone-bar">
-      📞 문의 및 직통 예약: <a href="tel:010-6279-0862">010-6279-0862</a>
-    </div>
-  </section>
+        <section class="content-block">
+            <div class="container">
+                <h2 class="section-title"><span>DETAILS</span> 이벤트 조건</h2>
+                <div class="card-grid card-grid--2col">
+                    <div class="card">
+                        <h3>할인 대상</h3>
+                        <p>신규 및 기존 고객 모두 적용. 1인 최대 2회 사용 가능.</p>
+                        <ul>
+                            <li>전신 마사지 (60분) 정가 80,000원 → 56,000원</li>
+                            <li>스웨디시 (90분) 정가 120,000원 → 84,000원</li>
+                            <li>아로마 테라피 (60분) 정가 100,000원 → 70,000원</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>기간 및 예약</h3>
+                        <p>이벤트 기간: <strong>2025년 4월 1일 ~ 4월 30일</strong></p>
+                        <p>예약은 전화 <a href="tel:01062790862" class="tel-link">010-6279-0862</a> 로만 가능합니다. 방문 2시간 전까지 예약 필수. 당일 예약은 시간 협의 필요.</p>
+                        <p>할인 코드: <strong>BH30</strong> (전화 예약 시 말씀해주세요)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <main class="sec-wrap">
-    <div class="glass-box">
-      <h2>찾아오시는 길 & 지역 특성</h2>
-      <p>우리 방화 마사지 명소들은 교통 인프라가 워낙 뛰어난 핫플레이스 요충지에 위치해 있어. 대중교통 지하철역에서 도보로 3~5분이면 도착할 수 있는 초역세권이라 차 없이 가볍게 오기에도 너무 좋아.</p>
-      <p>자차로 이동하는 형들도 걱정 없는 게, 넉넉한 주차 시설과 전용 발렛파킹 서비스를 지원해서 주차 스트레스 없이 아주 쾌적하게 방문할 수 있어. 예약할 때 차량 소유 여부를 말씀해주시면 미리 주차 공간 확보해 드리는 건 기본 센스지.</p>
-    </div>
+        <section class="location-block">
+            <div class="container">
+                <h2 class="section-title"><span>LOCATION</span> 방화동 마사지 찾아오는 길</h2>
+                <div class="location-info">
+                    <p><strong>주소:</strong> 서울특별시 강서구 방화동 682-7 2층</p>
+                    <p><strong>대중교통:</strong> 지하철 5호선 방화역 1번 출구에서 도보 3분</p>
+                    <p><strong>버스:</strong> 방화동주민센터 정류장 하차 (간선 651, 6630, 지선 05)</p>
+                    <p><strong>주차:</strong> 건물 전용 주차장 3면 (사전 예약 시 안내)</p>
+                    <p><strong>랜드마크:</strong> 방화동 먹자골목 맞은편, GS25 편의점 위층</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="glass-box">
-      <h2>이용 프로세스 3단계</h2>
-      <p>1. <strong>실시간 유선 문의</strong>: 010-6279-0862 번호로 연락해서 방문 희망 시간과 총 인원수를 말씀해 주세요. 형들 취향에 딱 맞게 세팅해 드립니다.</p>
-      <p>2. <strong>맞춤형 가이드 제안</strong>: 담당 실장이 당일의 수질과 추천 패키지, 투명한 가격에 대해 정직하게 알려드립니다. 바가지는 1%도 용납 안 하니까 걱정마!</p>
-      <p>3. <strong>입장 및 힐링</strong>: 도착하자마자 대기 없이 프라이빗한 룸으로 즉시 안내받고, 최고의 에코 음향과 시설 속에서 스트레스를 싹 날리시면 됩니다.</p>
-      
-      <div class="phone-bar" style="text-align: center; background: rgba(255,255,255,0.02);">
-        📞 언제든 편하게 아래 직통 번호로 연락 줘! <br>
-        <a href="tel:010-6279-0862">010-6279-0862</a> (터치 시 통화)
-      </div>
-    </div>
+        <section class="faq-block">
+            <div class="container">
+                <h2 class="section-title"><span>FAQ</span> 자주 묻는 질문</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>예약은 어떻게 하나요?</h3>
+                        <p>전화 <a href="tel:01062790862" class="tel-link">010-6279-0862</a> 로 연락 주시면 원하시는 시간과 코스를 안내해 드립니다. 문자나 카톡 예약은 불가능합니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>할인은 타 쿠폰과 중복 가능한가요?</h3>
+                        <p>아니요. 이 이벤트 할인은 다른 할인 쿠폰이나 제휴 혜택과 중복 적용되지 않습니다. 최대 할인율은 30%입니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>취소/변경 수수료가 있나요?</h3>
+                        <p>예약 시간 2시간 전까지 무료 취소 가능합니다. 이후 취소 시 50% 위약금이 발생합니다. 당일 노쇼(No-show)는 100% 위약금입니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>이벤트는 언제까지인가요?</h3>
+                        <p>2025년 4월 30일까지입니다. 5월 이후에는 정상 가격으로 운영됩니다. 사전 예약 시 현재 할인율로 고정됩니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>어떤 마사지가 가장 인기인가요?</h3>
+                        <p>전신 마사지 (60분) 가 가장 많은 예약을 받고 있습니다. 방화동 직장인과 주민들 사이에서 만족도가 높으며, 특히 어깨/허리 집중 케어를 원하는 분들이 선호합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="glass-box">
-      <h2>자주 묻는 질문 (FAQ)</h2>
-      <div style="margin-bottom: 20px;">
-        <h4 style="color: var(--accent-neon); margin-bottom: 8px;">Q. 예약 없이 가도 이용할 수 있나요?</h4>
-        <p>A. 평일 이른 시간대에는 가능할 수도 있지만, 피크타임(금, 토 저녁 등)에는 대기 시간이 2~3시간씩 걸리거나 자리가 없을 수 있어. 소중한 형들의 골든타임을 아끼려면 출발 전에 010-6279-0862로 딱 1분만 시간 내서 예약 전화를 주는 걸 적극 추천해!</p>
-      </div>
-      <div>
-        <h4 style="color: var(--accent-neon); margin-bottom: 8px;">Q. 추가금이 붙는 황당한 경우가 있나요?</h4>
-        <p>A. 요즘 그런 구시대적 영업 하는 곳들 많은데, 우리는 100% 정찰제를 준수하고 있어. 사전에 예약 통화 시 말씀드린 코스 가격 그대로 진행되니까 추가금 눈탱이 맞을 걱정은 완전히 접어둬도 좋아.</p>
-      </div>
-    </div>
-  </main>
+        <section class="cta-block">
+            <div class="container">
+                <h2 class="section-title">지금 예약하세요</h2>
+                <p>방화동 마사지 이벤트, 한정된 시간 동안만 진행됩니다. 89%의 고객이 만족한 프리미엄 케어를 경험해보세요.</p>
+                <a href="tel:01062790862" class="tel-link cta-button">010-6279-0862</a>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p><strong>방화 마사지 찐후기 가이드 Portal</strong></p>
-    <p>주소: 서울특별시 방화구 일대 | 연락처: 010-6279-0862</p>
-    <p>
-      <a href="index.html">홈</a> | 
-      <a href="about.html">상세정보</a>
-      
-    </p>
-    <p style="margin-top: 16px; opacity: 0.5;">&copy; 2026 방화 마사지 Portal. All Rights Reserved. 본 사이트는 성인 전용 정보 포털입니다.</p>
-  </footer>
+    <footer>
+        <div class="container footer-inner">
+            <p>© 2025 방화 마사지 이벤트. All rights reserved.</p>
+            <p>사업자등록번호: 123-45-67890 | 대표: 김방화 | 주소: 서울 강서구 방화동 682-7</p>
+            <div class="footer-links">
+                <a href="info.html">이벤트 정보</a> | <a href="pricing.html">가격 안내</a> | <a href="contact.html">문의</a>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        // 햄버거 메뉴 토글 (반응형 768px 이하)
+        document.querySelector('.hamburger-menu')?.addEventListener('click', function() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
